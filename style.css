@@ -17,6 +17,13 @@
 
 body {
     min-height: 1000px;
+    background: #fff;
+    color: black;
+}
+
+body.dark {
+    color: #fff;
+    background: black;
 }
 
 header {
@@ -85,6 +92,7 @@ header nav ul {
     transition: 0.25s;
     transform: translateX(100px);
     opacity: 0;
+    margin-right: 25px;
 }
 
 header.sticky nav ul {
@@ -98,15 +106,21 @@ header nav ul li {
     list-style: none;
 }
 
-header nav ul li a {
+header nav ul li a,
+header nav ul li button {
     color: #fff;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
     font-size: 1.2em;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li button:hover {
     color: rgb(255, 80, 138);
 }
 
@@ -123,6 +137,7 @@ section p {
     font-size: 1.2em;
 }
 
+/* Phone */
 
 @media (max-width: 991px) {
     section,
@@ -161,8 +176,10 @@ section p {
         opacity: 1;
         visibility: visible;
     }
-    header.sticky nav ul li a {
+    header.sticky nav ul li a,
+    header.sticky nav ul li button {
         font-size: 2em;
+        outline: none;
     }
     header.sticky .toggle {
         position: fixed;
