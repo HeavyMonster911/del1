@@ -30,7 +30,8 @@ body.dark {
     background: black;
 }
 
-body.dark footer a:hover {
+body.dark footer a:hover,
+body.dark footer a:focus {
     color: gold;
     border-color: gold;
 }
@@ -254,6 +255,17 @@ footer {
 /* Phone */
 
 @media (max-width: 991px) {
+    body.dark header.sticky,
+    body.dark header.sticky nav ul {
+        color: #000;
+        background-color: #fff;
+    }
+    body.dark header.sticky .logo,
+    body.dark header.sticky nav ul li a,
+    body.dark header.sticky nav ul li button {
+        color: #000;
+        text-shadow: none;
+    }
     main section,
     header {
         padding: 40px;
@@ -314,7 +326,7 @@ footer {
     }
     footer {
         display: none;
-        opacity: 0;
         visibility: hidden;
+        opacity: 0;
     }
 }
