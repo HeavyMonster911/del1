@@ -30,6 +30,15 @@ body.dark {
     background: black;
 }
 
+body.dark footer a:hover {
+    color: gold;
+    border-color: gold;
+}
+
+body.dark section p a {
+    color: gold;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -59,7 +68,7 @@ header img {
 }
 
 header.sticky img {
-    opacity: 0.5;
+    opacity: 0.4;
     transition: 1s;
 }
 
@@ -75,6 +84,7 @@ header .logo {
     letter-spacing: -2px;
     transition: 1s;
     z-index: 1;
+    text-shadow: 5px 5px 25px black;
 }
 
 header.sticky .logo {
@@ -148,6 +158,11 @@ main section h2 {
 
 main section p {
     font-size: 1.2em;
+}
+
+main section p a {
+    text-decoration: none;
+    color: red;
 }
 
 
