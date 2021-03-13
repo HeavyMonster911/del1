@@ -25,6 +25,42 @@ body {
     color: black;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+body section h1::selection,
+body section p a::selection {
+    color: white;
+    background: red;
+}
+
+body section p::selection,
+body section h2::selection {
+    color: white;
+    background: #000;
+}
+
+body.dark section h1::selection,
+body.dark section p a::selection {
+    color: #000;
+    background: gold;
+}
+
+body.dark section p::selection,
+body.dark section h2::selection {
+    color: #000;
+    background: #fff;
+}
+/* 
+body::-webkit-scrollbar-track {
+    background: rgb(0, 58, 39);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(139, 139, 139);
+} */
+
 body.dark {
     color: #fff;
     background: black;
@@ -36,7 +72,8 @@ body.dark footer a:focus {
     border-color: gold;
 }
 
-body.dark section p a {
+body.dark section p a,
+body.dark section h1 {
     color: gold;
 }
 
@@ -93,6 +130,7 @@ header.sticky .logo {
     font-size: 2em;
     left: 100px;
     transform: translate(0, -50%);
+    transition: 1s;
 }
 
 header nav {
@@ -149,12 +187,28 @@ main {
 
 
 main section {
-    margin-top: 30vh;
+    margin-top: 20vh;
     padding: 100px;
+}
+
+main section h1 {
+    font-size: 4em;
+    padding: 10px;
+    padding-left: 0;
+    letter-spacing: -5px;
+    color: red;
+    transition: 0.25s;
+    width: 100%;
+    overflow: hidden;
+}
+
+main section h1:hover {
+    opacity: 0.5;
 }
 
 main section h2 {
     font-size: 3em;
+    transition: 1s;
 }
 
 main section p {
@@ -164,6 +218,24 @@ main section p {
 main section p a {
     text-decoration: none;
     color: red;
+}
+
+main section p a:hover {
+    opacity: 0.5;
+}
+
+body main section i {
+    transition: 0.5s;
+}
+
+body main section i:hover {
+    color: red;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+body.dark main section i:hover {
+    color: gold;
 }
 
 
