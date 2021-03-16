@@ -87,6 +87,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     transition: 1s;
+    z-index: 100;
 }
 
 header.sticky {
@@ -130,6 +131,14 @@ header.sticky .logo {
     font-size: 2em;
     left: 100px;
     transform: translate(0, -50%);
+    transition: 0.05s;
+    visibility: hidden;
+    
+}
+
+header.sticky .logo::before {
+    content: "GameBrand.";
+    visibility: visible;
     transition: 1s;
 }
 
@@ -192,6 +201,7 @@ main section {
 }
 
 main section h1 {
+    display: inline-block;
     font-size: 4em;
     padding: 10px;
     padding-left: 0;
