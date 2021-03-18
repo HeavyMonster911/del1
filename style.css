@@ -25,10 +25,6 @@ body {
     color: black;
 }
 
-body::-webkit-scrollbar {
-    width: 0px;
-}
-
 body section h1::selection,
 body section p a::selection {
     color: white;
@@ -194,6 +190,67 @@ main {
     justify-content: space-between;
 }
 
+#scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#preogressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 50%;
+    background: linear-gradient(to top, gold, red);
+    animation: animate 5s linear infinite;
+}
+
+#preogressbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, gold, red);
+    filter: blur(10px);
+
+}
+
+#preogressbar::after {
+    content: "";
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+#percent {
+    font-family: consolas;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    color: grey;
+    font-size: 1.5em;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
 
 main section {
     margin-top: 20vh;
@@ -258,6 +315,7 @@ footer {
     background: rgb(29, 29, 29);
     padding: 10px 20px;
     align-items: center;
+    z-index: 1;
 }
 
 .footer-list svg {
@@ -359,6 +417,17 @@ footer {
     }
     main section h2 {
         font-size: 2em;
+    }
+    #scrollpath,
+    #preogressbar {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #percent {
+        top: 25%;
+        right: 10px;
+        font-size: 1em;
     }
     header.sticky img {
         opacity: 0;
