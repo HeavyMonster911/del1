@@ -239,7 +239,6 @@ main {
 }
 
 #percent {
-    font-family: consolas;
     letter-spacing: -2px;
     text-transform: uppercase;
     position: fixed;
