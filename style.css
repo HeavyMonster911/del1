@@ -28,7 +28,7 @@ body {
 body section h1::selection,
 body section p a::selection {
     color: white;
-    background: red;
+    background: rgb(255, 80, 138);
 }
 
 body section p::selection,
@@ -105,6 +105,15 @@ header img {
 header.sticky img {
     opacity: 0.4;
     transition: 1s;
+}
+
+header img::selection,
+header.sticky img::selection,
+header .logo::selection,
+header.sticky .logo::selection,
+header.sticky li a::selection,
+header.sticky li button::selection {
+    background: none;
 }
 
 header .logo {
@@ -190,6 +199,10 @@ main {
     justify-content: space-between;
 }
 
+main section br::selection {
+    background: none;
+}
+
 #scrollpath {
     position: fixed;
     top: 0;
@@ -205,7 +218,7 @@ main {
     right: 0;
     width: 10px;
     height: 50%;
-    background: linear-gradient(to top, gold, red);
+    background: linear-gradient(to top, gold, rgb(255, 80, 138));
     animation: animate 5s linear infinite;
 }
 
@@ -216,7 +229,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, gold, red);
+    background: linear-gradient(to top, gold, rgb(255, 80, 138));
     filter: blur(10px);
 
 }
@@ -249,6 +262,11 @@ main {
     font-size: 1.5em;
     writing-mode: vertical-rl;
     text-orientation: sideways;
+    cursor: default;
+}
+
+#percent::selection {
+    background: none;
 }
 
 main section {
@@ -262,7 +280,7 @@ main section h1 {
     padding: 10px;
     padding-left: 0;
     letter-spacing: -5px;
-    color: red;
+    color: rgb(255, 80, 138);
     transition: 0.25s;
     width: 100%;
     overflow: hidden;
@@ -283,7 +301,7 @@ main section p {
 
 main section p a {
     text-decoration: none;
-    color: red;
+    color: rgb(255, 80, 138);
 }
 
 main section p a:hover {
@@ -295,7 +313,7 @@ body main section i {
 }
 
 body main section i:hover {
-    color: red;
+    color: rgb(255, 80, 138);
     transform: rotate(360deg);
     transition: 1s;
 }
@@ -304,6 +322,154 @@ body.dark main section i:hover {
     color: gold;
 }
 
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+    animation: animation 5s linear infinite;
+}
+
+body.dark .container .box {
+    animation: animationDark 5s linear infinite;
+}
+
+@keyframes animationDark {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(90deg);
+    }
+}
+
+@keyframes animation {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(45deg);
+    }
+}
+
+.container .box:hover {
+    transform: translateY(-20px);
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #ffe498, #00ffea);
+    border-radius: 5px;
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, #ffe498, #00ffea);
+    filter: blur(30px);
+}
+
+body.dark .container .box::before,
+body.dark .container .box::after {
+    background: linear-gradient(315deg, #ff81ea, #00eeff);
+}
+
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after {
+    background: linear-gradient(270deg, #ff719c, #73ffff);
+}
+
+body.dark .container .box:nth-child(2)::before,
+body.dark .container .box:nth-child(2)::after {
+    background: linear-gradient(270deg, #f1ff71, #73ffff);
+}
+
+.container .box:nth-child(3)::before,
+.container .box:nth-child(3)::after {
+    background: linear-gradient(45deg, #8dff57, #ff74e8);
+}
+
+body.dark .container .box:nth-child(3)::before,
+body.dark .container .box:nth-child(3)::after {
+    background: linear-gradient(45deg, #4dff03, #00d0ff);
+}
+
+.container .box span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0.5;
+    transition: 0.75s;
+}
+
+body.dark .container .box span {
+    opacity: 1;
+}
+
+.container .box .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+
+.container .box .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content a {
+    font-size: 1.1em;
+    display: inline-block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.container .box .content a:hover {
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+}
 
 
 
@@ -315,6 +481,10 @@ footer {
     padding: 10px 20px;
     align-items: center;
     z-index: 1;
+}
+
+footer p::selection {
+    background: none;
 }
 
 .footer-list svg {
@@ -367,8 +537,8 @@ footer {
 }
 
 .brands li a:hover {
-    color: red;
-    border: 1px solid red;
+    color: rgb(255, 80, 138);
+    border: 1px solid rgb(255, 80, 138);
 }
 
 .brands li a::before {
@@ -388,8 +558,8 @@ footer {
 }
 
 .brands li a:focus {
-    color: red;
-    border-color: red;
+    color: rgb(255, 80, 138);
+    border-color: rgb(255, 80, 138);
 }
 
 /* Phone */
