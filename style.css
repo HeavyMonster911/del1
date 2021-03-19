@@ -587,6 +587,20 @@ footer p::selection {
     main section h2 {
         font-size: 2em;
     }
+    .container {
+        padding: 0;
+    }
+    .container .box {
+        width: 40vh;
+        height: 100%;
+        margin: 20px 0;
+    }
+    .container .box .content h2 {
+        font-size: 2em;
+    }
+    .container .box .content p {
+        font-size: 1em;
+    }
     #scrollpath,
     #preogressbar {
         display: none;
