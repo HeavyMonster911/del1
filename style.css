@@ -40,13 +40,26 @@ body section h2::selection {
 body.dark section h1::selection,
 body.dark section p a::selection {
     color: #000;
-    background: gold;
+    background: #00ffea;
 }
 
 body.dark section p::selection,
 body.dark section h2::selection {
     color: #000;
     background: #fff;
+}
+body.dark section h1,
+body section h1 {
+    animation: animationH2 2s linear infinite;
+}
+
+@keyframes animationH2 {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(50deg);
+    }
 }
 /* 
 body::-webkit-scrollbar-track {
@@ -64,13 +77,13 @@ body.dark {
 
 body.dark footer a:hover,
 body.dark footer a:focus {
-    color: gold;
-    border-color: gold;
+    color: #00ffea;
+    border-color: #00ffea;
 }
 
 body.dark section p a,
 body.dark section h1 {
-    color: gold;
+    color: #00ffea;
 }
 
 header {
@@ -319,7 +332,21 @@ body main section i:hover {
 }
 
 body.dark main section i:hover {
-    color: gold;
+    color: #00ffea;
+    animation: animationBomb 5s linear infinite;
+}
+
+body main section i:hover {
+    animation: animationBomb 5s linear infinite;
+}
+
+@keyframes animationBomb {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(90deg);
+    }
 }
 
 .container {
