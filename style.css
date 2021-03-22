@@ -48,19 +48,7 @@ body.dark section h2::selection {
     color: #000;
     background: #fff;
 }
-body.dark section h1,
-body section h1 {
-    animation: animationH2 2s linear infinite;
-}
 
-@keyframes animationH2 {
-    0%, 100% {
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        filter: hue-rotate(50deg);
-    }
-}
 /* 
 body::-webkit-scrollbar-track {
     background: rgb(0, 58, 39);
@@ -212,8 +200,59 @@ main {
     justify-content: space-between;
 }
 
+/* .backgroundContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    width: 50px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+} */
+
 main section br::selection {
     background: none;
+}
+
+body main #glitchyTitle {
+    position: relative;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 50%;
+    color: #000;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 4em;
+    padding: 10px;
+    padding-left: 0;
+    letter-spacing: -5px;
+}
+
+body.dark main #glitchyTitle {
+    color: #fff;
+}
+
+.Gtbox {
+    position: absolute;
+    overflow: hidden;
+}
+
+.Gtbox::before {
+    content: "GameGlitch";
 }
 
 #scrollpath {
@@ -287,29 +326,16 @@ main section {
     padding: 100px;
 }
 
-main section h1 {
-    display: inline-block;
-    font-size: 4em;
-    padding: 10px;
-    padding-left: 0;
-    letter-spacing: -5px;
-    color: rgb(255, 80, 138);
-    transition: 0.25s;
-    width: 100%;
-    overflow: hidden;
-}
-
-main section h1:hover {
-    opacity: 0.5;
-}
-
 main section h2 {
     font-size: 3em;
     transition: 1s;
+    text-transform: uppercase;
+    letter-spacing: -5px;
 }
 
 main section p {
     font-size: 1.2em;
+    letter-spacing: -1px;
 }
 
 main section p a {
@@ -527,11 +553,7 @@ footer p::selection {
     font-size: 10px;
     width: 25%;
     margin-left: 15px;
-}
-
-.footer-info p:hover,
-.footer-list svg:hover {
-    color: rgba(255, 255, 255, 0.5);
+    cursor: default;
 }
 
 .brands {
@@ -610,6 +632,13 @@ footer p::selection {
     header.sticky {
         color: black;
         background-color: black;
+    }
+    body main #glitchyTitle {
+        width: 100%;
+        color: #000;
+    }
+    body.dark main #glitchyTitle {
+        color: #fff;
     }
     main section h2 {
         font-size: 2em;
