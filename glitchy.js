@@ -13,5 +13,5 @@ for (let i = 0; i < glitch.length; i++) {
     glitch[i].style.width = Math.floor(Math.random()*500) + 'px'
     glitch[i].style.height = Math.floor(Math.random()*100) + 'px'
 }
-}, 150)
+}, 100)
 
