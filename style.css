@@ -236,7 +236,7 @@ body main #glitchyTitle {
     color: #000;
     overflow: hidden;
     display: inline-block;
-    font-size: 4em;
+    font-size: 5em;
     padding: 10px;
     padding-left: 0;
     letter-spacing: -5px;
@@ -307,7 +307,7 @@ body.dark main #glitchyTitle {
     letter-spacing: -2px;
     text-transform: uppercase;
     position: fixed;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     right: 15px;
     color: grey;
@@ -496,6 +496,7 @@ body.dark .container .box span {
     font-size: 2em;
     color: #fff;
     margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 
 .container .box .content p {
@@ -514,6 +515,7 @@ body.dark .container .box span {
     padding: 5px 10px;
     font-weight: 700;
     transition: 0.5s;
+    transition-delay: 0.25s;
 }
 
 .container .box .content a:hover {
@@ -538,6 +540,11 @@ footer {
 
 footer p::selection {
     background: none;
+}
+
+.footerLeft {
+    display: flex;
+    align-items: center;
 }
 
 .footer-list svg {
@@ -636,6 +643,7 @@ footer p::selection {
     body main #glitchyTitle {
         width: 100%;
         color: #000;
+        font-size: 4em;
     }
     body.dark main #glitchyTitle {
         color: #fff;
@@ -715,9 +723,12 @@ footer p::selection {
         background-size: 60%;
         transition: 0.25s;
     }
-    footer {
+    .footerLeft {
         display: none;
         visibility: hidden;
         opacity: 0;
+    }
+    .brands {
+        margin: 0 auto;
     }
 }
