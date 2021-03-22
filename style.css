@@ -722,6 +722,9 @@ footer p::selection {
         background-size: 60%;
         transition: 0.25s;
     }
+    footer {
+        width: 100%;
+    }
     .footerLeft {
         display: none;
         visibility: hidden;
@@ -729,5 +732,19 @@ footer p::selection {
     }
     .brands {
         margin: 0 auto;
+    }
+    .brands li a {
+        color: #fff;
+        border-color: #fff;
+    }
+    body.dark .brands li a {
+        color: #000;
+        border-color: #000;
+    }
+    body footer {
+        background-color: #000;
+    }
+    body.dark footer {
+        background: #fff;
     }
 }
