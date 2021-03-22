@@ -228,7 +228,6 @@ main section br::selection {
 body main #glitchyTitle {
     position: relative;
     display: flex;
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 10vh;
