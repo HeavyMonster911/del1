@@ -341,6 +341,7 @@ body.dark main #glitchyTitle {
     writing-mode: vertical-rl;
     text-orientation: sideways;
     cursor: default;
+    z-index: 10;
 }
 
 #percent::selection {
@@ -715,7 +716,7 @@ footer p::selection {
     }
     #percent {
         top: 25%;
-        right: 10px;
+        right: 15px;
         font-size: 1em;
     }
     header.sticky img {
