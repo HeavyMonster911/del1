@@ -335,7 +335,7 @@ body.dark main #glitchyTitle {
     position: fixed;
     top: 25%;
     transform: translateY(-50%);
-    right: 15px;
+    left: 5px;
     color: grey;
     font-size: 1.5em;
     writing-mode: vertical-rl;
@@ -421,6 +421,7 @@ body main section i:hover {
     margin: 20px 30px;
     transition: 0.5s;
     animation: animation 5s linear infinite;
+    opacity: 0.8;
 }
 
 body.dark .container .box {
@@ -478,7 +479,7 @@ body.dark .container .box::after {
 
 .container .box:nth-child(2)::before,
 .container .box:nth-child(2)::after {
-    background: linear-gradient(270deg, #ff719c, #73ffff);
+    background: linear-gradient(45deg, #ff719c, #73ffff);
 }
 
 body.dark .container .box:nth-child(2)::before,
