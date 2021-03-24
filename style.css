@@ -679,6 +679,9 @@ footer p::selection {
         color: black;
         background-color: black;
     }
+    header .logo {
+        letter-spacing: -1px;
+    }
     body main #glitchyTitle {
         width: 100%;
         color: #000;
