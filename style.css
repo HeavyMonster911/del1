@@ -2,7 +2,7 @@
     font-family: 'SF Compact Display Medium';
     font-style: normal;
     font-weight: normal;
-    src: local('SF Compact Display Medium'), url('sf-compact-display-medium-58646eb43a785.woff') format('woff');
+    src: local('SF Compact Display Medium'), url('fonts/sf-compact-display-medium-58646eb43a785.woff') format('woff');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
