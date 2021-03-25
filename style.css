@@ -562,6 +562,68 @@ body.dark .container .box span {
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 0;
 }
+.textInput {
+    position: relative;
+    width: 100%;
+    user-select: none;
+}
+
+.textInput input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 15px 0 20px;
+    background: none;
+    outline: none;
+    padding-left: 0;
+    font-size: 100%;
+    letter-spacing: 4px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.textInput input::selection {
+    color: #000;
+    background: none;
+}
+
+.textInput input::placeholder {
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.textInput #gnrt {
+    font-size: 1.1em;
+    display: inline-block;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: 700;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+    cursor: pointer;
+}
+
+#gnrt:hover {
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+}
+
+#gnrt::selection {
+    background: none;
+}
+
+#gnrt:active {
+    background: none;
+}
 
 
 
